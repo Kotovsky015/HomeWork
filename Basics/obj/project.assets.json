@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
-      "projectName": "ConsoleApp",
-      "projectPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\Basics\\Basics.csproj",
+      "projectName": "Basics",
+      "projectPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\Basics\\Basics.csproj",
       "packagesPath": "C:\\Users\\ar.kudabayev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\ConsoleApp\\obj\\",
+      "outputPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\Basics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ar.kudabayev\\AppData\\Roaming\\NuGet\\NuGet.Config"
