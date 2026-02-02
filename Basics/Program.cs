@@ -4,10 +4,8 @@ using ConsoleApp.Task4_Clinic;
 
 internal class Program
 {
-    public static void Main(string[] args)
+    static void Main(string[] args)
     {
-        Task4Clinic task4 = new Task4Clinic();
-        
-        task4.Run();
+        Console.WriteLine("Hello World!");
     }
 }

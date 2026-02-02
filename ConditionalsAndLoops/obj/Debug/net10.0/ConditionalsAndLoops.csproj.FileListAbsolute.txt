@@ -1,0 +1,15 @@
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\bin\Debug\net10.0\ConditionalsAndLoops.exe
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\bin\Debug\net10.0\ConditionalsAndLoops.deps.json
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\bin\Debug\net10.0\ConditionalsAndLoops.runtimeconfig.json
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\bin\Debug\net10.0\ConditionalsAndLoops.dll
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\bin\Debug\net10.0\ConditionalsAndLoops.pdb
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.AssemblyInfoInputs.cache
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.AssemblyInfo.cs
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.csproj.CoreCompileInputs.cache
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.sourcelink.json
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.dll
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\refint\ConditionalsAndLoops.dll
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.pdb
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ConditionalsAndLoops.genruntimeconfig.cache
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\ConditionalsAndLoops\obj\Debug\net10.0\ref\ConditionalsAndLoops.dll

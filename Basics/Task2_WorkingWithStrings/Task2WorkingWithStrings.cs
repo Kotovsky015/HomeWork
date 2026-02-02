@@ -2,10 +2,10 @@
 
 public class Task2WorkingWithStrings
 {
-    private int age;
-    private string name;
-    private string zodiac;
-    private string work;
+    int age;
+    string name;
+    string zodiac;
+    string work;
 
     public void Run()
     {

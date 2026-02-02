@@ -14,5 +14,4 @@ public class Task1Variables
     float speed;
     short sex;
     bool isAlive;
-    
 }
