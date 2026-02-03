@@ -1,12 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using ConditionalsAndLoops.Task6_CurrencyExchange;
+using ConditionalsAndLoops.Task7_NameOutput;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-       Task6CurrencyExchange task6CurrencyExchange = new Task6CurrencyExchange();
-       task6CurrencyExchange.Run();
+        Task7NameOutput task7NameOutput = new Task7NameOutput();
+        task7NameOutput.Run();
+       
     }
 }
