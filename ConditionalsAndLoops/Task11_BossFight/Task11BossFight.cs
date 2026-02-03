@@ -47,6 +47,7 @@ public class Task11BossFight
                     swordAttackDamage = rnd.Next(5, 8);
                     bossLife -= swordAttackDamage;
                     Console.WriteLine($"Вы нанесли боссу:{swordAttackDamage}");
+                    
                     break;
                 case CommandFireboltAttack:
 
@@ -62,7 +63,6 @@ public class Task11BossFight
                     {
                         Console.WriteLine("Недостаточно маны");
                     }
-
                     break;
                 case CommandExplosionAttack:
                     explosionAttackDamage = rnd.Next(20, 30);
@@ -76,7 +76,6 @@ public class Task11BossFight
                     {
                         Console.WriteLine("Необходимо выпустить \"Огненный шар\"");
                     }
-
                     break;
                 case CommandHealthAndManaPotion:
                     if (healthAndManaPotionCount > 0)
@@ -103,7 +102,6 @@ public class Task11BossFight
                     {
                         Console.WriteLine("Бутылки восстановления закончились");
                     }
-
                     break;
                 default:
                     Console.WriteLine("Не верная команда. Вы пропускаете ход");
@@ -119,6 +117,7 @@ public class Task11BossFight
             if (bossLife <= 0 && heroMaxLife <= 0)
             {
                 Console.WriteLine("Ничья. Вы оба мертвы");
+                break;
             }
             else if (bossLife <= 0)
             {
