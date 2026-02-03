@@ -5,6 +5,7 @@ public class Task10PowerOfTwo
     public void Run()
     {
         Random rnd = new Random();
+        
         int number = rnd.Next(1, 100);
         int value = 1;
         int count = 0;
