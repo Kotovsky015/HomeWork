@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace ConditionalsAndLoops.Task8_ProgramWithPassword;
+﻿namespace ConditionalsAndLoops.Task8_ProgramWithPassword;
 
 public class Task8ProgramWithPassword
 {

@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace ConditionalsAndLoops.Task5_ConsoleMenu;
+﻿namespace ConditionalsAndLoops.Task5_ConsoleMenu;
 
 public class Task5ConsoleMenu
 {
