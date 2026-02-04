@@ -16,133 +16,167 @@ public class Task6CurrencyExchange
         const string CommandRubExchangeToEur = "6";
         const string CommandExit = "7";
 
+        const string USDSymbol = "USD";
+        const string EURSymbol = "EUR";
+        const string RUBSymbol = "RUB";
+
+        const string ErrorMessage = "Not enough money!";
+
         float eurInWallet;
         float usdInWallet;
         float rubInWallet;
-        float exchangeCurrencyCount;
+        float exchangeCurrencyCount = 0f;
 
-        string userInput;
+        string commandInput;
 
         bool isWork = true;
 
-        Console.Write("Введите количество EUR:");
+        Console.Write($"Введите количество {EURSymbol}:");
         eurInWallet = Convert.ToSingle(Console.ReadLine());
 
-        Console.Write("Введите количество USD:");
+        Console.Write($"Введите количество {USDSymbol}:");
         usdInWallet = Convert.ToSingle(Console.ReadLine());
 
-        Console.Write("Введите количество RUB:");
+        Console.Write($"Введите количество {RUBSymbol}:");
         rubInWallet = Convert.ToSingle(Console.ReadLine());
 
         while (isWork)
         {
             Console.WriteLine("Выберите операцию:");
-            Console.WriteLine($"{CommandEurExchangeToUsd} - Обменять евро на доллары.");
-            Console.WriteLine($"{CommandUsdExchangeToEur} - Обменять доллары на евро.");
-            Console.WriteLine($"{CommandRubExchangeToUsd} - Обменять рубли на доллары.");
-            Console.WriteLine($"{CommandUsdExchangeToRub} - Обменять доллары на рубли.");
-            Console.WriteLine($"{CommandEurExchangeToRub} - Обменять евро на рубли.");
-            Console.WriteLine($"{CommandRubExchangeToEur} - Обменять рубли на евро.");
+            Console.WriteLine($"{CommandEurExchangeToUsd} - Обменять {EURSymbol} на {USDSymbol}.");
+            Console.WriteLine($"{CommandUsdExchangeToEur} - Обменять {USDSymbol} на {EURSymbol}.");
+            Console.WriteLine($"{CommandRubExchangeToUsd} - Обменять {RUBSymbol} на {USDSymbol}.");
+            Console.WriteLine($"{CommandUsdExchangeToRub} - Обменять {USDSymbol} на {RUBSymbol}.");
+            Console.WriteLine($"{CommandEurExchangeToRub} - Обменять {EURSymbol} на {RUBSymbol}.");
+            Console.WriteLine($"{CommandRubExchangeToEur} - Обменять {RUBSymbol} на {EURSymbol}.");
             Console.WriteLine($"{CommandExit} - Выход.");
 
-            userInput = Console.ReadLine();
+            commandInput = Console.ReadLine();
 
-            switch (userInput)
+            if (commandInput == CommandEurExchangeToUsd)
+            {
+                Console.Write($"Введите сколько {EURSymbol} хотите обменять на {USDSymbol}:");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+                if (exchangeCurrencyCount <= eurInWallet)
+                {
+                    eurInWallet -= exchangeCurrencyCount;
+                }
+                else
+                {
+                    Console.WriteLine(ErrorMessage);
+                    continue;
+                }
+            }
+            else if (commandInput == CommandUsdExchangeToEur)
+            {
+                Console.Write($"Введите сколько {USDSymbol} хотите обменять на {EURSymbol}:");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+                if (exchangeCurrencyCount <= usdInWallet)
+                {
+                    usdInWallet -= exchangeCurrencyCount;
+                }
+                else
+                {
+                    Console.WriteLine(ErrorMessage);
+                    continue;
+                }
+            }
+            else if (commandInput == CommandRubExchangeToUsd)
+            {
+                Console.Write($"Введите сколько {RUBSymbol} хотите обменять на {USDSymbol}:");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+
+                if (exchangeCurrencyCount <= rubInWallet)
+                {
+                    rubInWallet -= exchangeCurrencyCount;
+                }
+                else
+                {
+                    Console.WriteLine(ErrorMessage);
+                    continue;
+                }
+            }
+            else if (commandInput == CommandUsdExchangeToRub)
+            {
+                Console.Write($"Введите сколько {USDSymbol} хотите обменять на {RUBSymbol}:");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+
+                if (exchangeCurrencyCount <= usdInWallet)
+                {
+                    usdInWallet -= exchangeCurrencyCount;
+                }
+                else
+                {
+                    Console.WriteLine(ErrorMessage);
+                    continue;
+                }
+            }
+            else if (commandInput == CommandEurExchangeToRub)
+            {
+                Console.Write($"Введите сколько {EURSymbol} хотите обменять на {RUBSymbol}:");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+
+                if (exchangeCurrencyCount <= eurInWallet)
+                {
+                    eurInWallet -= exchangeCurrencyCount;
+                }
+                else
+                {
+                    Console.WriteLine(ErrorMessage);
+                    continue;
+                }
+            }
+            else if (commandInput == CommandRubExchangeToEur)
+            {
+                Console.Write($"Введите сколько {RUBSymbol} хотите обменять на {EURSymbol}:");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+
+                if (exchangeCurrencyCount <= rubInWallet)
+                {
+                    rubInWallet -= exchangeCurrencyCount;
+                }
+                else
+                {
+                    Console.WriteLine(ErrorMessage);
+                    continue;
+                }
+            }
+            else if (commandInput == CommandExit)
+            {
+                Console.WriteLine("Выход из приложения.");
+            }
+            else
+            {
+                Console.WriteLine("Нет такой команды.");
+                continue;
+            }
+
+            switch (commandInput)
             {
                 case CommandEurExchangeToUsd:
-                    Console.Write("Введите колько евро хотите обменять на доллары:");
-                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-                    if (exchangeCurrencyCount <= eurInWallet)
-                    {
-                        eurInWallet -= exchangeCurrencyCount;
-                        usdInWallet += exchangeCurrencyCount * EurToUsd;
-                    }
-                    else
-                    {
-                        Console.WriteLine("У вас не достаточно средств для обмена");
-                    }
-
-                    Console.WriteLine($"usd {usdInWallet}. eur {eurInWallet}. rub {rubInWallet} ");
+                    usdInWallet += exchangeCurrencyCount * EurToUsd;
                     break;
                 case CommandUsdExchangeToEur:
-                    Console.Write("Введите колько долларов хотите обменять на евро:");
-                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-                    if (exchangeCurrencyCount <= usdInWallet)
-                    {
-                        usdInWallet -= exchangeCurrencyCount;
-                        eurInWallet += exchangeCurrencyCount / EurToUsd;
-                    }
-                    else
-                    {
-                        Console.WriteLine("У вас не достаточно средств для обмена");
-                    }
-
-                    Console.WriteLine($"usd {usdInWallet}. eur {eurInWallet}. rub {rubInWallet} ");
+                    eurInWallet += exchangeCurrencyCount / EurToUsd;
                     break;
                 case CommandRubExchangeToUsd:
-                    Console.Write("Введите колько рублей хотите обменять на доллары:");
-                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-                    if (exchangeCurrencyCount <= rubInWallet)
-                    {
-                        rubInWallet -= exchangeCurrencyCount;
-                        usdInWallet += exchangeCurrencyCount * RubToUsd;
-                    }
-                    else
-                    {
-                        Console.WriteLine("У вас не достаточно средств для обмена");
-                    }
-
-                    Console.WriteLine($"usd {usdInWallet}. eur {eurInWallet}. rub {rubInWallet} ");
+                    usdInWallet += exchangeCurrencyCount * RubToUsd;
                     break;
                 case CommandUsdExchangeToRub:
-                    Console.Write("Введите колько долларов хотите обменять на рубли:");
-                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-                    if (exchangeCurrencyCount <= usdInWallet)
-                    {
-                        usdInWallet -= exchangeCurrencyCount;
-                        rubInWallet += exchangeCurrencyCount / RubToUsd;
-                    }
-                    else
-                    {
-                        Console.WriteLine("У вас не достаточно средств для обмена");
-                    }
-
-                    Console.WriteLine($"usd {usdInWallet}. eur {eurInWallet}. rub {rubInWallet} ");
+                    rubInWallet += exchangeCurrencyCount / RubToUsd;
                     break;
                 case CommandEurExchangeToRub:
-                    Console.Write("Введите колько евро хотите обменять на рубли:");
-                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-                    if (exchangeCurrencyCount <= eurInWallet)
-                    {
-                        eurInWallet -= exchangeCurrencyCount;
-                        rubInWallet += exchangeCurrencyCount * RubToEur;
-                    }
-                    else
-                    {
-                        Console.WriteLine("У вас не достаточно средств для обмена");
-                    }
-
-                    Console.WriteLine($"usd {usdInWallet}. eur {eurInWallet}. rub {rubInWallet} ");
+                    rubInWallet += exchangeCurrencyCount * RubToEur;
                     break;
                 case CommandRubExchangeToEur:
-                    Console.Write("Введите колько рублей хотите обменять на евро:");
-                    exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-                    if (exchangeCurrencyCount <= rubInWallet)
-                    {
-                        rubInWallet -= exchangeCurrencyCount;
-                        eurInWallet += exchangeCurrencyCount / RubToEur;
-                    }
-                    else
-                    {
-                        Console.WriteLine("У вас не достаточно средств для обмена");
-                    }
-
-                    Console.WriteLine($"usd {usdInWallet}. eur {eurInWallet}. rub {rubInWallet} ");
+                    eurInWallet += exchangeCurrencyCount / RubToEur;
                     break;
                 case CommandExit:
                     isWork = false;
                     break;
             }
+
+            Console.WriteLine($"{USDSymbol}-{usdInWallet} {EURSymbol}-{eurInWallet} {RUBSymbol}-{rubInWallet}");
         }
     }
 }
