@@ -22,19 +22,9 @@ public class Task2BiggestElement
         int columns = originalMatrix.Length / rows;
         int maxNumber = 0;
 
-        //Вывести исходную матрица.
+        //Вывести исходную матрица. Найти максимальное число.
         Console.WriteLine("Исходная матрица");
 
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < columns; j++)
-            {
-                Console.Write(originalMatrix[i, j] + " ");
-            }
-            Console.WriteLine();
-        }
-
-        //Найти максимальное число
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < columns; j++)
@@ -43,10 +33,12 @@ public class Task2BiggestElement
                 {
                     maxNumber = originalMatrix[i, j];
                 }
+                Console.Write(originalMatrix[i, j] + " ");
             }
+            Console.WriteLine();
         }
 
-        //Модифицировать матрицу"Найти наибольший элемент матрицы A(10,10) и записать ноль в те ячейки, где он находятся"
+        //Модифицировать матрицу "Найти наибольший элемент матрицы A(10,10) и записать ноль в те ячейки, где он находятся"
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < columns; j++)
