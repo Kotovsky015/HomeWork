@@ -4,12 +4,12 @@ public class Task2ExitControll
 {
     public void Run()
     {
-        string inputText;
+        const string IsExit = "exit";
 
         while (true)
         {
-            inputText = Console.ReadLine();
-            if (inputText == "exit")
+            string inputText = Console.ReadLine();
+            if (inputText == IsExit)
             {
                 break;
             }

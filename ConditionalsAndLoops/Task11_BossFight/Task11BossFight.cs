@@ -9,21 +9,21 @@ public class Task11BossFight
         const string CommandExplosionAttack = "3";
         const string CommandHealthAndManaPotion = "4";
 
-        int bossLife = 150;
-        int heroMaxLife = 100;
+        int bossHealth = 150;
+        int heroMaxHealth = 100;
         int heroMaxMana = 100;
-        int healthAndManaPotionCount = 3;
+        int recoveryPotion = 3;
 
-        Random rnd = new Random();
+        Random randomAttackRange = new Random();
 
         bool canUseExplosion = false;
 
         while (true)
         {
-            Console.WriteLine($"Boss Life: {bossLife}");
+            Console.WriteLine($"Boss Life: {bossHealth}");
             Console.WriteLine();
-            Console.WriteLine($"Hero Life: {heroMaxLife} \nHero Mana : {heroMaxMana}");
-            Console.WriteLine($"Количество эликсира жизни: {healthAndManaPotionCount}");
+            Console.WriteLine($"Hero Life: {heroMaxHealth} \nHero Mana : {heroMaxMana}");
+            Console.WriteLine($"Количество эликсира жизни: {recoveryPotion}");
             Console.WriteLine();
             Console.WriteLine("Вас атакует Босс...");
             Console.WriteLine();
@@ -36,39 +36,36 @@ public class Task11BossFight
             string userInput;
             userInput = Console.ReadLine();
 
-            int swordAttackDamage;
-            int fireboltAttackDamage;
-            int explosionAttackDamage;
-
             switch (userInput)
             {
                 case CommandSwordAttack:
+                    int swordAttackDamage = randomAttackRange.Next(5, 8);
                     Console.WriteLine("Вы атакуете: \"Обычная атака мечём\"");
-                    swordAttackDamage = rnd.Next(5, 8);
-                    bossLife -= swordAttackDamage;
+                    bossHealth -= swordAttackDamage;
                     Console.WriteLine($"Вы нанесли боссу:{swordAttackDamage}");
-                    
                     break;
-                case CommandFireboltAttack:
 
-                    fireboltAttackDamage = rnd.Next(10, 15);
+                case CommandFireboltAttack:
+                    int fireboltAttackDamage = randomAttackRange.Next(10, 15);
                     if (heroMaxMana >= 20)
                     {
                         heroMaxMana -= 20;
                         canUseExplosion = true;
                         Console.WriteLine($"Вы атакуете: \"Огненный шар\" {fireboltAttackDamage}");
-                        bossLife -= fireboltAttackDamage;
+                        bossHealth -= fireboltAttackDamage;
                     }
                     else
                     {
                         Console.WriteLine("Недостаточно маны");
                     }
+
                     break;
+
                 case CommandExplosionAttack:
-                    explosionAttackDamage = rnd.Next(20, 30);
+                    int explosionAttackDamage = randomAttackRange.Next(20, 30);
                     if (canUseExplosion)
                     {
-                        bossLife -= explosionAttackDamage;
+                        bossHealth -= explosionAttackDamage;
                         Console.WriteLine($"Вы атакуете: \"Взрыв\" {explosionAttackDamage}");
                         canUseExplosion = false;
                     }
@@ -76,16 +73,18 @@ public class Task11BossFight
                     {
                         Console.WriteLine("Необходимо выпустить \"Огненный шар\"");
                     }
+
                     break;
+
                 case CommandHealthAndManaPotion:
-                    if (healthAndManaPotionCount > 0)
+                    if (recoveryPotion > 0)
                     {
-                        heroMaxLife += 20;
+                        heroMaxHealth += 20;
                         heroMaxMana += 20;
 
-                        if (heroMaxLife > 100)
+                        if (heroMaxHealth > 100)
                         {
-                            heroMaxLife = 100;
+                            heroMaxHealth = 100;
                         }
 
                         if (heroMaxMana > 100)
@@ -93,39 +92,40 @@ public class Task11BossFight
                             heroMaxMana = 100;
                         }
 
-                        healthAndManaPotionCount--;
+                        recoveryPotion--;
                         Console.WriteLine(
-                            $"Жизнь восстановлена {heroMaxLife} + 20 \nМана восстановлена {heroMaxMana} + 20");
-                        Console.WriteLine($"Осталось {healthAndManaPotionCount} бутылок восстановления жизни и маны.");
+                            $"Жизнь восстановлена {heroMaxHealth} + 20 \nМана восстановлена {heroMaxMana} + 20");
+                        Console.WriteLine($"Осталось {recoveryPotion} бутылок восстановления жизни и маны.");
                     }
                     else
                     {
                         Console.WriteLine("Бутылки восстановления закончились");
                     }
+
                     break;
+
                 default:
                     Console.WriteLine("Не верная команда. Вы пропускаете ход");
                     break;
             }
 
-            int bossAttackDamage;
-            bossAttackDamage = rnd.Next(9, 15);
-            heroMaxLife -= bossAttackDamage;
+            int bossAttackDamage = randomAttackRange.Next(9, 15);
+            heroMaxHealth -= bossAttackDamage;
 
             Console.WriteLine($"Босс атакует вас:{bossAttackDamage}");
 
-            if (bossLife <= 0 && heroMaxLife <= 0)
+            if (bossHealth <= 0 && heroMaxHealth <= 0)
             {
                 Console.WriteLine("Ничья. Вы оба мертвы");
                 break;
             }
-            else if (bossLife <= 0)
+            else if (bossHealth <= 0)
             {
                 Console.WriteLine("Бос умер...");
                 Console.WriteLine("Победа!");
                 break;
             }
-            else if (heroMaxLife <= 0)
+            else if (heroMaxHealth <= 0)
             {
                 Console.WriteLine("Вы погибли...");
                 Console.WriteLine("Потрачено!");

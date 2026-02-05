@@ -2,16 +2,15 @@
 
 public class Task3Sequence
 {
-    //While выбран в задаче так как не указано количество итераций или нужное число.
     public void Run()
     {
-        int number = 7;
+        int step = 7;
         int startNumber = 5;
+        int maxNumber = 103;
 
-        while (true)
+        for (int sum = startNumber; sum <= maxNumber; sum+=step)
         {
-            startNumber += number;
-            Console.WriteLine(startNumber);
+            Console.WriteLine(sum);
         }
     }
 }

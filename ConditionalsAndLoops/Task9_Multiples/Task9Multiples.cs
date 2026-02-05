@@ -5,12 +5,12 @@ public class Task9Multiples
     public void Run()
     {
         Random rnd = new Random();
-        int number = rnd.Next(1, 50);
+        int randomNumber = rnd.Next(1, 50);
         int result = 0;
         
         while (result <= 150)
         {
-            result += number;
+            result += randomNumber;
             if (result >= 50 && result <= 150)
             {
                 Console.WriteLine(result);

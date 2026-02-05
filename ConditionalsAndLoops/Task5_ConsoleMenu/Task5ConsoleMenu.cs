@@ -11,7 +11,6 @@ public class Task5ConsoleMenu
 
         Random rnd = new Random();
         bool isWork = true;
-        string userInput;
 
         while (isWork)
         {
@@ -20,7 +19,7 @@ public class Task5ConsoleMenu
             Console.WriteLine($"{CommandClearConsole} - очистить консоль");
             Console.WriteLine($"{CommandExit} - выход");
 
-            userInput = Console.ReadLine();
+           string userInput = Console.ReadLine();
 
             switch (userInput)
             {
@@ -30,8 +29,8 @@ public class Task5ConsoleMenu
                     Console.WriteLine($"Ваш текст:{userInput}");
                     break;
                 case CommandRandomNumber:
-                    int randomNumber = rnd.Next(1, 1001);
-                    Console.WriteLine($"Случайное число:{randomNumber}");
+                    int rndNumberRange = rnd.Next(1, 1001);
+                    Console.WriteLine($"Случайное число:{rndNumberRange}");
                     break;
                 case CommandClearConsole:
                     Console.Clear();
