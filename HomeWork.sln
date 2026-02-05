@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics", "Basics\Basics.csproj", "{9E29C8D2-546D-46E9-AB89-C72429C08784}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module1_Basics", "Module1_Basics\Module1_Basics.csproj", "{9E29C8D2-546D-46E9-AB89-C72429C08784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalsAndLoops", "ConditionalsAndLoops\ConditionalsAndLoops.csproj", "{584E0595-F335-42BD-A0C1-05593172A3FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module2_ConditionalsAndLoops", "Module2_ConditionalsAndLoops\Module2_ConditionalsAndLoops.csproj", "{584E0595-F335-42BD-A0C1-05593172A3FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3_Arrays", "Module3_Arrays\Module3_Arrays.csproj", "{04D604E1-0619-4AB6-9D15-329A40FD75E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{584E0595-F335-42BD-A0C1-05593172A3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584E0595-F335-42BD-A0C1-05593172A3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584E0595-F335-42BD-A0C1-05593172A3FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D604E1-0619-4AB6-9D15-329A40FD75E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D604E1-0619-4AB6-9D15-329A40FD75E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D604E1-0619-4AB6-9D15-329A40FD75E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D604E1-0619-4AB6-9D15-329A40FD75E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

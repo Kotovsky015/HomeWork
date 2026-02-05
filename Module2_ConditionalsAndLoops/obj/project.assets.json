@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\ConditionalsAndLoops\\ConditionalsAndLoops.csproj",
-      "projectName": "ConditionalsAndLoops",
-      "projectPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\ConditionalsAndLoops\\ConditionalsAndLoops.csproj",
+      "projectUniqueName": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\Module2_ConditionalsAndLoops\\Module2_ConditionalsAndLoops.csproj",
+      "projectName": "Module2_ConditionalsAndLoops",
+      "projectPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\Module2_ConditionalsAndLoops\\Module2_ConditionalsAndLoops.csproj",
       "packagesPath": "C:\\Users\\ar.kudabayev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\ConditionalsAndLoops\\obj\\",
+      "outputPath": "C:\\Users\\ar.kudabayev\\RiderProjects\\ConsoleApp\\Module2_ConditionalsAndLoops\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ar.kudabayev\\AppData\\Roaming\\NuGet\\NuGet.Config"
