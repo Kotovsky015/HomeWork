@@ -10,13 +10,11 @@ public class Task9Multiples
         const int MaxNumber = 50;
         const int MinMultiples = 50;
         const int MaxMultiples = 150;
-        
-        int randomNumber = rnd.Next(MinNumber, MaxNumber);
-        int result = 0;
 
-        while (result <= MaxMultiples)
+        int randomNumber = rnd.Next(MinNumber, MaxNumber);
+
+        for (int result = 0; result <= MaxMultiples; result += randomNumber)
         {
-            result += randomNumber;
             if (result >= MinMultiples && result <= MaxMultiples)
             {
                 Console.WriteLine(result);

@@ -22,7 +22,6 @@ public class Task11BossFight
         const int MinBossAttack = 9;
         const int MaxBossAttack = 15;
 
-
         int bossHealth = 150;
         int heroHealth = 100;
         int heroMana = 100;
@@ -52,7 +51,6 @@ public class Task11BossFight
             switch (userInput)
             {
                 case CommandSwordAttack:
-
                     int swordAttackDamage = randomAttackRange.Next(MinSwordAttack, MaxSwordAttack);
                     Console.WriteLine("Вы атакуете: \"Обычная атака мечём\"");
                     bossHealth -= swordAttackDamage;
@@ -60,7 +58,6 @@ public class Task11BossFight
                     break;
 
                 case CommandFireboltAttack:
-
                     int fireboltAttackDamage = randomAttackRange.Next(MinFireBoltAttack, MaxFireBoltAttack);
                     if (heroMana >= 20)
                     {
@@ -77,7 +74,6 @@ public class Task11BossFight
                     break;
 
                 case CommandExplosionAttack:
-
                     int explosionAttackDamage = randomAttackRange.Next(MinExplosionAttack, MaxExplosionAttack);
                     if (canUseExplosion)
                     {
@@ -93,7 +89,6 @@ public class Task11BossFight
                     break;
 
                 case CommandRecoveryPotion:
-
                     if (recoveryPotionCount > 0)
                     {
                         heroHealth += PotionRecovery;

@@ -5,16 +5,12 @@ public class Task2ExitControll
     public void Run()
     {
         const string IsExit = "exit";
-        bool isWork = true;
 
-        while (isWork)
+        string inputText = "";
+
+        while (inputText != IsExit)
         {
-            string inputText = Console.ReadLine();
-            if (inputText == IsExit)
-            {
-                isWork = false;
-                break;
-            }
+            inputText = Console.ReadLine();
         }
     }
 }
