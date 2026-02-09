@@ -22,23 +22,16 @@ public class Task6CurrencyExchange
 
         const string ErrorMessage = "Not enough money!";
 
-        float eurInWallet;
-        float usdInWallet;
-        float rubInWallet;
-        float exchangeCurrencyCount = 0f;
-
-        string commandInput;
-
         bool isWork = true;
 
         Console.Write($"Введите количество {EURSymbol}:");
-        eurInWallet = Convert.ToSingle(Console.ReadLine());
+        float eurInWallet = Convert.ToSingle(Console.ReadLine());
 
         Console.Write($"Введите количество {USDSymbol}:");
-        usdInWallet = Convert.ToSingle(Console.ReadLine());
+        float usdInWallet = Convert.ToSingle(Console.ReadLine());
 
         Console.Write($"Введите количество {RUBSymbol}:");
-        rubInWallet = Convert.ToSingle(Console.ReadLine());
+        float rubInWallet = Convert.ToSingle(Console.ReadLine());
 
         while (isWork)
         {
@@ -51,7 +44,8 @@ public class Task6CurrencyExchange
             Console.WriteLine($"{CommandRubExchangeToEur} - Обменять {RUBSymbol} на {EURSymbol}.");
             Console.WriteLine($"{CommandExit} - Выход.");
 
-            commandInput = Console.ReadLine();
+            float exchangeCurrencyCount = 0f;
+            string commandInput = Console.ReadLine();
 
             if (commandInput == CommandEurExchangeToUsd)
             {

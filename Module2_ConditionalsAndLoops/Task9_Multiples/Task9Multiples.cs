@@ -5,13 +5,19 @@ public class Task9Multiples
     public void Run()
     {
         Random rnd = new Random();
-        int randomNumber = rnd.Next(1, 50);
-        int result = 0;
+
+        const int MinNumber = 1;
+        const int MaxNumber = 50;
+        const int MinMultiples = 50;
+        const int MaxMultiples = 150;
         
-        while (result <= 150)
+        int randomNumber = rnd.Next(MinNumber, MaxNumber);
+        int result = 0;
+
+        while (result <= MaxMultiples)
         {
             result += randomNumber;
-            if (result >= 50 && result <= 150)
+            if (result >= MinMultiples && result <= MaxMultiples)
             {
                 Console.WriteLine(result);
             }

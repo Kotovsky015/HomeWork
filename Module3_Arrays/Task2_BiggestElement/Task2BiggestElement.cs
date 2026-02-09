@@ -50,7 +50,7 @@ public class Task2BiggestElement
             }
         }
 
-        //Вывести модифицированную матрица.
+        //Вывести модифицированную матрицу.
         Console.WriteLine();
         Console.WriteLine("Модифицированная матрица");
 

@@ -9,6 +9,9 @@ public class Task5ConsoleMenu
         const string CommandClearConsole = "3";
         const string CommandExit = "4";
 
+        const int MinNumber = 1;
+        const int MaxNumber = 1001;
+        
         Random rnd = new Random();
         bool isWork = true;
 
@@ -29,7 +32,7 @@ public class Task5ConsoleMenu
                     Console.WriteLine($"Ваш текст:{userInput}");
                     break;
                 case CommandRandomNumber:
-                    int rndNumberRange = rnd.Next(1, 1001);
+                    int rndNumberRange = rnd.Next(MinNumber, MaxNumber);
                     Console.WriteLine($"Случайное число:{rndNumberRange}");
                     break;
                 case CommandClearConsole:

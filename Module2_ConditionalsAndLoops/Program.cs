@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Task7NameOutput task7NameOutput = new Task7NameOutput();
-        task7NameOutput.Run();
+       Task8ProgramWithPassword task8 = new Task8ProgramWithPassword();
+       task8.Run();
     }
 }
