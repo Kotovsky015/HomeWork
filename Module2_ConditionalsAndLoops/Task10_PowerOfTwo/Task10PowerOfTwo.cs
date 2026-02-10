@@ -14,7 +14,7 @@ public class Task10PowerOfTwo
         int value = 1;
         int count = 0;
 
-        for (int i = 0; value <= randomNumberRange; i++)
+        for (;value <= randomNumberRange;)
         {
             value *= 2;
             count++;

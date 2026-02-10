@@ -8,14 +8,13 @@ public class Task8ProgramWithPassword
 
         int maxAttempts = 3;
         bool isCorrectPassword = true;
-        string userInput;
 
         while (maxAttempts > 0 && isCorrectPassword == false)
         {
             maxAttempts--;
 
             Console.Write("Введите пароль:");
-            userInput = Console.ReadLine();
+            string userInput = Console.ReadLine();
 
             if (userInput == Password)
             {
