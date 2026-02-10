@@ -33,8 +33,10 @@ public class Task2BiggestElement
                 {
                     maxNumber = originalMatrix[i, j];
                 }
-                Console.Write(originalMatrix[i, j] + " ");
+
+                Console.Write($"{originalMatrix[i, j]} ");
             }
+
             Console.WriteLine();
         }
 
@@ -58,12 +60,12 @@ public class Task2BiggestElement
         {
             for (int j = 0; j < columns; j++)
             {
-                Console.Write(originalMatrix[i, j] + " ");
+                Console.Write($"{originalMatrix[i, j]} ");
             }
 
             Console.WriteLine();
         }
-        
+
         Console.WriteLine();
         Console.WriteLine($"Наибольший элемент в матрице: {maxNumber}");
     }

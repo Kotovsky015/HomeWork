@@ -4,13 +4,13 @@ public class Task2ExitControll
 {
     public void Run()
     {
-        const string IsExit = "exit";
+        const string CurrentPassword = "exit";
 
-        string inputText = "";
+        string userPassword = "";
 
-        while (inputText != IsExit)
+        while (userPassword != CurrentPassword)
         {
-            inputText = Console.ReadLine();
+            userPassword = Console.ReadLine();
         }
     }
 }
