@@ -10,26 +10,25 @@ public class Task1RowsAndColumns
             { 40, 50, 60 }
         };
 
-        int rows = matrix.GetUpperBound(0) + 1;
-        int columns = matrix.Length / rows;
-
+        int columnsNum = 0;
+        int rowsNum = 1;
         int derivativeSum = 1;
-        int sumOfSecondRow = 0;
+        int sumSecondRow = 0;
 
-        for (int i = 0; i < rows; i++)
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            derivativeSum *= matrix[i, 0];
+            derivativeSum *= matrix[i, columnsNum];
 
-            for (int j = 0; j < columns; j++)
+            for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                if (i == 1)
+                if (i == rowsNum)
                 {
-                    sumOfSecondRow += matrix[i, j];
+                    sumSecondRow += matrix[i, j];
                 }
             }
         }
 
         Console.WriteLine(derivativeSum);
-        Console.WriteLine(sumOfSecondRow);
+        Console.WriteLine(sumSecondRow);
     }
 }

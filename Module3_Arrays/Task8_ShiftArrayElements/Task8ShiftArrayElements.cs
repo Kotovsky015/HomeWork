@@ -12,9 +12,10 @@ public class Task8ShiftArrayElements
         };
 
         string inputRepeatCount = Console.ReadLine();
-        int count = Convert.ToInt32(inputRepeatCount);
+        int userNumber = Convert.ToInt32(inputRepeatCount);
+        int shiftNumber = userNumber % numbersArray.Length;
 
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < shiftNumber; i++)
         {
             for (int j = 1; j < numbersArray.Length; j++)
             {

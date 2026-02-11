@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Module2_ConditionalsAndLoops")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b140fcd18d5631756b86401b97bf3d2a6ec3fd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a3462da451def2b885423fcce1a821ee6e9e00d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Module2_ConditionalsAndLoops")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Module2_ConditionalsAndLoops")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,16 +1,16 @@
 ﻿namespace Arrays.Task9_ParentheticalExpression;
 
-public class Task9ParentheticalExpression
+public class Task9BracketChecker
 {
     public void Run()
     {
-        string value = "(((())";
+        string text = "(((())";
         int maxDepth = 0;
         int depth = 0;
 
-        foreach (char c in value)
+        foreach (char value in text)
         {
-            if (c == '(')
+            if (value == '(')
             {
                 depth++;
                 if (depth > maxDepth)
@@ -18,7 +18,7 @@ public class Task9ParentheticalExpression
                     maxDepth = depth;
                 }
             }
-            else if (c == ')')
+            else if (value == ')')
             {
                 depth--;
                 if (depth < 0)

@@ -4,6 +4,9 @@ public class Task4DynamicArray
 {
     public void Run()
     {
+        const string SUM = "SUM";
+        const string EXIT = "EXIT";
+
         int[] array = new int[0];
         bool isRunning = true;
 
@@ -23,36 +26,39 @@ public class Task4DynamicArray
             Console.Write("Введите цифру:");
 
             string userInput = Console.ReadLine();
-
-            if (userInput == "SUM")
+            switch (userInput)
             {
-                int sum = 0;
+                case SUM:
+                    int sum = 0;
+                    
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        sum += array[i];
+                    }
 
-                for (int i = 0; i < array.Length; i++)
-                {
-                    sum += array[i];
-                }
+                    Console.SetCursorPosition(0, 2);
+                    Console.WriteLine($"Сумма: {sum}");
+                    break;
 
-                Console.SetCursorPosition(0, 2);
-                Console.WriteLine($"Сумма: {sum}");
+                case EXIT:
+                    isRunning = false;
+                    break;
+                
+                default:
+                    Console.WriteLine("Такой команды нет.");
+                    break;
             }
-            else if (userInput == "EXIT")
+
+            int convertedInput = Convert.ToInt32(userInput);
+            int[] tempArray = new int[array.Length + 1];
+
+            for (int i = 0; i < array.Length; i++)
             {
-                isRunning = false;
+                tempArray[i] = array[i];
             }
-            else
-            {
-                int convertedInput = Convert.ToInt32(userInput);
-                int[] tempArray = new int[array.Length + 1];
 
-                for (int i = 0; i < array.Length; i++)
-                {
-                    tempArray[i] = array[i];
-                }
-
-                tempArray[array.Length] = convertedInput;
-                array = tempArray;
-            }
+            tempArray[array.Length] = convertedInput;
+            array = tempArray;
         }
     }
 }
