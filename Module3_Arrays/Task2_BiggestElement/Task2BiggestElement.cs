@@ -18,8 +18,8 @@ public class Task2BiggestElement
             { 14, 6, 8, 10, 12, 7, 20, 3, 20, 11 }
         };
 
-        int rows = originalMatrix.GetUpperBound(0) + 1;
-        int columns = originalMatrix.Length / rows;
+        int rows = originalMatrix.GetLength(0);
+        int columns = originalMatrix.GetLength(1);
         int maxNumber = 0;
 
         //Вывести исходную матрица. Найти максимальное число.
