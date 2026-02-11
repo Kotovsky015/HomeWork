@@ -10,7 +10,18 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Task8ShiftArrayElements task8ShiftArrayElements = new Task8ShiftArrayElements();
-        task8ShiftArrayElements.Run();
+        int[] array = { 4, 2 };
+        int[] tempArray = new int[array.Length * 2];
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            tempArray[i] = array[i];
+        }
+
+        for (int i = 0; i < tempArray.Length; i++)
+        {
+            Console.Write(tempArray[i]);
+        }
+       
     }
 }

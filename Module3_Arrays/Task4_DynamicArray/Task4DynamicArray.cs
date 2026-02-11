@@ -4,8 +4,8 @@ public class Task4DynamicArray
 {
     public void Run()
     {
-        const string SUM = "SUM";
-        const string EXIT = "EXIT";
+        const string SUM_COMMAND = "SUM";
+        const string EXIT_COMMAND = "EXIT";
 
         int[] array = new int[0];
         bool isRunning = true;
@@ -21,16 +21,16 @@ public class Task4DynamicArray
             }
 
             Console.SetCursorPosition(0, 5);
-            Console.WriteLine("Выйти из приложения: EXIT");
-            Console.WriteLine("Вывести сумму: SUM");
+            Console.WriteLine($"Выйти из приложения: {EXIT_COMMAND}");
+            Console.WriteLine($"Вывести сумму: {SUM_COMMAND}");
             Console.Write("Введите цифру:");
 
             string userInput = Console.ReadLine();
             switch (userInput)
             {
-                case SUM:
+                case SUM_COMMAND:
                     int sum = 0;
-                    
+
                     for (int i = 0; i < array.Length; i++)
                     {
                         sum += array[i];
@@ -40,10 +40,10 @@ public class Task4DynamicArray
                     Console.WriteLine($"Сумма: {sum}");
                     break;
 
-                case EXIT:
+                case EXIT_COMMAND:
                     isRunning = false;
                     break;
-                
+
                 default:
                     Console.WriteLine("Такой команды нет.");
                     break;
