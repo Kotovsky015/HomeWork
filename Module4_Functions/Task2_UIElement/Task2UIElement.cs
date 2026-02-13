@@ -10,7 +10,7 @@ public class Task2UIElement
 
     void DrawBar(int value, int maxValue, ConsoleColor color, int position)
     {
-        const int barWidth = 10;
+        const int BarWidth = 10;
 
         ConsoleColor defaultColor = Console.BackgroundColor;
         int valueDrawPercent = GetPercentage(value, maxValue);
@@ -29,7 +29,7 @@ public class Task2UIElement
 
         bar = "";
 
-        for (int i = valueDrawPercent; i < barWidth; i++)
+        for (int i = valueDrawPercent; i < BarWidth; i++)
         {
             bar += " ";
         }
