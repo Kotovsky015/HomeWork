@@ -2,6 +2,7 @@
 using Module4_Functions.Task2_UIElement;
 using Module4_Functions.Task3_KansasCityShuffle;
 using Module4_Functions.Task4_CardManager;
+using Module4_Functions.Task5_BraveNewWorld;
 
 internal class Program
 {

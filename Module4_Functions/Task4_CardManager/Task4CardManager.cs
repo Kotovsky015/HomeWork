@@ -4,11 +4,11 @@ public class Task4CardManager
 {
     public void Run()
     {
-        const int CommandAddEmployee = 1;
-        const int CommandShowInfo = 2;
-        const int CommandRemoveEmployee = 3;
-        const int CommandFirstName = 4;
-        const int CommandExit = 5;
+        const int AddEmployeeCommand = 1;
+        const int ShowInfoCommand = 2;
+        const int RemoveEmployeeCommand = 3;
+        const int FirstNameCommand = 4;
+        const int ExitCommand = 5;
 
         string[] employees = new string[]
         {
@@ -36,43 +36,42 @@ public class Task4CardManager
         {
             Console.Clear();
             Console.WriteLine("Выберите команду:");
-            Console.WriteLine("1.Добавить досье");
-            Console.WriteLine("2.Вывести все досье");
-            Console.WriteLine("3.Удалить досье");
-            Console.WriteLine("4.Поиск по фамилии");
-            Console.WriteLine("5.Выход");
+            Console.WriteLine($"{AddEmployeeCommand}.Добавить досье ");
+            Console.WriteLine($"{ShowInfoCommand}.Вывести все досье ");
+            Console.WriteLine($"{RemoveEmployeeCommand}.Удалить досье ");
+            Console.WriteLine($"{FirstNameCommand}.Поиск по фамилии ");
+            Console.WriteLine($"{ExitCommand}.Выход ");
 
             string userInput = Console.ReadLine();
-            int userChoise = 0;
-            bool isNumber = int.TryParse(userInput, out userChoise);
+            int userNumber = 0;
 
-            if (!isNumber)
+            if (!int.TryParse(userInput, out userNumber))
             {
                 Console.WriteLine("Введите число!");
                 Console.ReadKey();
                 continue;
             }
 
-            switch (userChoise)
+            switch (userNumber)
             {
-                case CommandAddEmployee:
+                case AddEmployeeCommand:
                     AddEmployee(ref employees, ref positions);
                     break;
 
-                case CommandShowInfo:
-                    ShowInfo(employees, positions);
+                case ShowInfoCommand:
+                    ShowEmployeeInfo(employees, positions);
                     break;
 
-                case CommandRemoveEmployee:
-                    ShowInfo(employees, positions);
+                case RemoveEmployeeCommand:
+                    ShowEmployeeInfo(employees, positions);
                     RemoveEmployee(ref employees, ref positions);
                     break;
 
-                case CommandFirstName:
-                    FindByLatsName(employees, positions);
+                case FirstNameCommand:
+                    FindByLastName(employees, positions);
                     break;
 
-                case CommandExit:
+                case ExitCommand:
                     isRunning = false;
                     break;
 
@@ -85,18 +84,16 @@ public class Task4CardManager
         }
     }
 
-    void AddEmployee(ref string[] addEmployee, ref string[] addPosition)
+    void AddEmployee(ref string[] employee, ref string[] position)
     {
-        Console.WriteLine("Введите ФИО");
-        string inputEmployee = Console.ReadLine();
-        Console.WriteLine("Введите должность");
-        string inputPosition = Console.ReadLine();
+        string inputEmployee = GetInput("Введите ФИО: ");
+        string inputPosition = GetInput("Введите должность: ");
 
-        addEmployee = AddSlot(addEmployee);
-        addPosition = AddSlot(addPosition);
+        employee = AddSlot(employee);
+        position = AddSlot(position);
 
-        addEmployee[addEmployee.Length - 1] = inputEmployee;
-        addPosition[addPosition.Length - 1] = inputPosition;
+        employee[employee.Length - 1] = inputEmployee;
+        position[position.Length - 1] = inputPosition;
     }
 
     string[] AddSlot(string[] array)
@@ -112,73 +109,77 @@ public class Task4CardManager
 
     void RemoveEmployee(ref string[] employee, ref string[] position)
     {
-        Console.WriteLine("Введите номер досье для удаления");
-        
-        string input = Console.ReadLine();
+        string input = GetInput("Введите номер досье для удаления: ");
         int index = 0;
         bool isNumber = int.TryParse(input, out index);
 
         if (!isNumber)
         {
-            Console.WriteLine("Введите число");
+            Console.WriteLine("Ошибка - Введите число: ");
+            return;
         }
-        else
+
+        if (index <= 0 || index > employee.Length)
         {
-            index = Convert.ToInt32(input) - 1;
+            Console.WriteLine("Нет такого индекса");
+            return;
+        }
 
-            if (index > 0 && index > employee.Length - 1)
+        string[] tempEmployee = new string[employee.Length - 1];
+        string[] tempPosition = new string[position.Length - 1];
+        index -= 1;
+
+        {
+            for (int i = 0; i < index; i++)
             {
-                Console.WriteLine("Нет такого индекса");
+                tempEmployee[i] = employee[i];
+                tempPosition[i] = position[i];
             }
-            else
+
+            for (int i = index + 1; i < employee.Length; i++)
             {
-                string[] tempEmployee = new string[employee.Length - 1];
-                string[] tempPosition = new string[position.Length - 1];
-                if (index >= 0 && index < employee.Length)
-                {
-                    for (int i = 0; i < index; i++)
-                    {
-                        tempEmployee[i] = employee[i];
-                        tempPosition[i] = position[i];
-                    }
-
-                    for (int i = index + 1; i < employee.Length; i++)
-                    {
-                        tempEmployee[i - 1] = employee[i];
-                        tempPosition[i - 1] = position[i];
-                    }
-
-                    employee = tempEmployee;
-                    position = tempPosition;
-                }
+                tempEmployee[i - 1] = employee[i];
+                tempPosition[i - 1] = position[i];
             }
+
+            employee = tempEmployee;
+            position = tempPosition;
         }
     }
 
-    void ShowInfo(string[] employees, string[] positions)
+    void ShowEmployeeInfo(string[] employee, string[] position)
     {
-        for (int i = 0; i < employees.Length; i++)
+        for (int i = 0; i < employee.Length; i++)
         {
-            Console.WriteLine($"{i + 1} {employees[i]}-{positions[i]}");
+            Console.WriteLine($"{i + 1} {employee[i]}-{position[i]}");
         }
     }
 
-    void FindByLatsName(string[] employees, string[] positions)
+    void FindByLastName(string[] employee, string[] positions)
     {
-        Console.WriteLine("Введите фамилию");
-        
-        string firstName = Console.ReadLine();
-        int index = 0;
+        string lastName = GetInput("Введите фамилию: ");
+        bool findLastName = false;
 
-        for (int i = 0; i < employees.Length; i++)
+        for (int i = 0; i < employee.Length; i++)
         {
-            string temp = employees[i].Split()[0];
+            string temp = employee[i].Split()[0];
 
-            if (temp == firstName)
+            if (temp.Equals(lastName, StringComparison.CurrentCultureIgnoreCase))
             {
-                index = i;
-                Console.WriteLine($"{index + 1} {employees[index]}-{positions[index]}");
+                Console.WriteLine($"{i + 1} {employee[i]}-{positions[i]}");
+                findLastName = true;
             }
         }
+
+        if (!findLastName)
+        {
+            Console.WriteLine("Нет такой фамилии в списке");
+        }
+    }
+
+    string GetInput(string message)
+    {
+        Console.Write(message);
+        return Console.ReadLine().Trim();
     }
 }
