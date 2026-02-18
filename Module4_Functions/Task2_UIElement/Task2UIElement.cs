@@ -4,8 +4,14 @@ public class Task2UIElement
 {
     public void Run()
     {
-        DrawBar(500, 1000, ConsoleColor.Green, 0);
-        DrawBar(100, 100, ConsoleColor.DarkBlue, 1);
+        const int MAX_HEALTH = 1000;
+        const int MAX_MANA = 100;
+
+        int currentHealth = 500;
+        int currentMana = 100;
+
+        DrawBar(currentHealth, MAX_HEALTH, ConsoleColor.Green, 0);
+        DrawBar(currentMana, MAX_MANA, ConsoleColor.DarkBlue, 1);
     }
 
     void DrawBar(int value, int maxValue, ConsoleColor color, int position)

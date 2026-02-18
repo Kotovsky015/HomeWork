@@ -8,7 +8,7 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Task4CardManager task4CardManager = new Task4CardManager();
-        task4CardManager.Run();
+       Task5BraveNewWorld task5BraveNewWorld = new Task5BraveNewWorld();
+       task5BraveNewWorld.Run();
     }
 }
