@@ -8,7 +8,6 @@ public class Task5BraveNewWorld
     {
         char[,] map = ReadMap("map.txt");
         ConsoleKeyInfo pressedKey = new ConsoleKeyInfo('w', ConsoleKey.W, false, false, false);
-        Console.CursorVisible = false;
 
         int pacmanX = 1;
         int pacmanY = 1;
