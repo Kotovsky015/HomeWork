@@ -1,0 +1,15 @@
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\bin\Debug\net10.0\Module5_Collections.exe
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\bin\Debug\net10.0\Module5_Collections.deps.json
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\bin\Debug\net10.0\Module5_Collections.runtimeconfig.json
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\bin\Debug\net10.0\Module5_Collections.dll
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\bin\Debug\net10.0\Module5_Collections.pdb
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.AssemblyInfoInputs.cache
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.AssemblyInfo.cs
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.csproj.CoreCompileInputs.cache
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.sourcelink.json
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.dll
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\refint\Module5_Collections.dll
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.pdb
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\Module5_Collections.genruntimeconfig.cache
+C:\Users\ar.kudabayev\RiderProjects\ConsoleApp\Module5_Collections\obj\Debug\net10.0\ref\Module5_Collections.dll

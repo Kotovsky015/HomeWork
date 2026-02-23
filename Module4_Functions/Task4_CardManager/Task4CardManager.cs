@@ -125,26 +125,25 @@ public class Task4CardManager
             return;
         }
 
+        index--;
+
         string[] tempEmployee = new string[employee.Length - 1];
         string[] tempPosition = new string[position.Length - 1];
-        index -= 1;
 
+        for (int i = 0; i < index; i++)
         {
-            for (int i = 0; i < index; i++)
-            {
-                tempEmployee[i] = employee[i];
-                tempPosition[i] = position[i];
-            }
-
-            for (int i = index + 1; i < employee.Length; i++)
-            {
-                tempEmployee[i - 1] = employee[i];
-                tempPosition[i - 1] = position[i];
-            }
-
-            employee = tempEmployee;
-            position = tempPosition;
+            tempEmployee[i] = employee[i];
+            tempPosition[i] = position[i];
         }
+
+        for (int i = index + 1; i < employee.Length; i++)
+        {
+            tempEmployee[i - 1] = employee[i];
+            tempPosition[i - 1] = position[i];
+        }
+
+        employee = tempEmployee;
+        position = tempPosition;
     }
 
     void ShowEmployeeInfo(string[] employee, string[] position)
@@ -182,4 +181,22 @@ public class Task4CardManager
         Console.Write(message);
         return Console.ReadLine().Trim();
     }
+
+    /*string[] removeSlot(string[] array)
+    {
+        string[] tempEmployee = new string[employee.Length - 1];
+        string[] tempPosition = new string[position.Length - 1];
+
+        for (int i = 0; i < index; i++)
+        {
+            tempEmployee[i] = employee[i];
+            tempPosition[i] = position[i];
+        }
+
+        for (int i = index + 1; i < employee.Length; i++)
+        {
+            tempEmployee[i - 1] = employee[i];
+            tempPosition[i - 1] = position[i];
+        }
+    }*/
 }
