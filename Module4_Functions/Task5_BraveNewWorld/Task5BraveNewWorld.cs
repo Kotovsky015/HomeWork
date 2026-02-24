@@ -6,6 +6,8 @@ public class Task5BraveNewWorld
 {
     public void Run()
     {
+        const char PLAYER = '@';
+
         char[,] map = ReadMap("map.txt");
         ConsoleKeyInfo pressedKey = new ConsoleKeyInfo('w', ConsoleKey.W, false, false, false);
 
@@ -21,10 +23,9 @@ public class Task5BraveNewWorld
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.SetCursorPosition(pacmanX, pacmanY);
-            Console.WriteLine("@");
+            Console.WriteLine(PLAYER);
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.SetCursorPosition(32, 0);
             Console.Write(pressedKey.KeyChar);
 
             pressedKey = Console.ReadKey();
@@ -93,21 +94,20 @@ public class Task5BraveNewWorld
     {
         int[] direction = { 0, 0 };
 
-        if (pressedKey.Key == ConsoleKey.UpArrow)
+        switch (pressedKey.Key)
         {
-            direction[1] -= 1;
-        }
-        else if (pressedKey.Key == ConsoleKey.DownArrow)
-        {
-            direction[1] += 1;
-        }
-        else if (pressedKey.Key == ConsoleKey.LeftArrow)
-        {
-            direction[0] = -1;
-        }
-        else if (pressedKey.Key == ConsoleKey.RightArrow)
-        {
-            direction[0] += 1;
+            case ConsoleKey.UpArrow:
+                direction[1] -= 1;
+                break;
+            case ConsoleKey.DownArrow:
+                direction[1] += 1;
+                break;
+            case ConsoleKey.LeftArrow:
+                direction[0] -= 1;
+                break;
+            case ConsoleKey.RightArrow:
+                direction[0] += 1;
+                break;
         }
 
         return direction;

@@ -8,7 +8,7 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-       Task5BraveNewWorld task5BraveNewWorld = new Task5BraveNewWorld();
-       task5BraveNewWorld.Run();
+     Task5BraveNewWorld task5BraveNewWorld = new Task5BraveNewWorld();
+     task5BraveNewWorld.Run();
     }
 }

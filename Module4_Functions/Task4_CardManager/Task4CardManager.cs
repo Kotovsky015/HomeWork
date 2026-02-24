@@ -4,11 +4,11 @@ public class Task4CardManager
 {
     public void Run()
     {
-        const int AddEmployeeCommand = 1;
-        const int ShowInfoCommand = 2;
-        const int RemoveEmployeeCommand = 3;
-        const int FirstNameCommand = 4;
-        const int ExitCommand = 5;
+        const string AddEmployeeCommand = "1";
+        const string ShowInfoCommand = "2";
+        const string RemoveEmployeeCommand = "3";
+        const string FirstNameCommand = "4";
+        const string ExitCommand = "5";
 
         string[] employees = new string[]
         {
@@ -43,16 +43,8 @@ public class Task4CardManager
             Console.WriteLine($"{ExitCommand}.Выход ");
 
             string userInput = Console.ReadLine();
-            int userNumber = 0;
 
-            if (!int.TryParse(userInput, out userNumber))
-            {
-                Console.WriteLine("Введите число!");
-                Console.ReadKey();
-                continue;
-            }
-
-            switch (userNumber)
+            switch (userInput)
             {
                 case AddEmployeeCommand:
                     AddEmployee(ref employees, ref positions);
@@ -127,23 +119,8 @@ public class Task4CardManager
 
         index--;
 
-        string[] tempEmployee = new string[employee.Length - 1];
-        string[] tempPosition = new string[position.Length - 1];
-
-        for (int i = 0; i < index; i++)
-        {
-            tempEmployee[i] = employee[i];
-            tempPosition[i] = position[i];
-        }
-
-        for (int i = index + 1; i < employee.Length; i++)
-        {
-            tempEmployee[i - 1] = employee[i];
-            tempPosition[i - 1] = position[i];
-        }
-
-        employee = tempEmployee;
-        position = tempPosition;
+        employee = RemoveSlot(employee, index);
+        position = RemoveSlot(position, index);
     }
 
     void ShowEmployeeInfo(string[] employee, string[] position)
@@ -182,21 +159,20 @@ public class Task4CardManager
         return Console.ReadLine().Trim();
     }
 
-    /*string[] removeSlot(string[] array)
+    string[] RemoveSlot(string[] array, int index)
     {
-        string[] tempEmployee = new string[employee.Length - 1];
-        string[] tempPosition = new string[position.Length - 1];
+        string[] tempArray = new string[array.Length - 1];
 
         for (int i = 0; i < index; i++)
         {
-            tempEmployee[i] = employee[i];
-            tempPosition[i] = position[i];
+            tempArray[i] = array[i];
         }
 
-        for (int i = index + 1; i < employee.Length; i++)
+        for (int i = index + 1; i < array.Length; i++)
         {
-            tempEmployee[i - 1] = employee[i];
-            tempPosition[i - 1] = position[i];
+            tempArray[i - 1] = array[i];
         }
-    }*/
+
+        return tempArray;
+    }
 }
