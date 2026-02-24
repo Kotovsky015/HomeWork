@@ -92,20 +92,25 @@ public class Task5BraveNewWorld
 
     int[] GetDirection(ConsoleKeyInfo pressedKey)
     {
+        const ConsoleKey MoveUp = ConsoleKey.UpArrow;
+        const ConsoleKey MoveDown = ConsoleKey.DownArrow;
+        const ConsoleKey MoveLeft = ConsoleKey.LeftArrow;
+        const ConsoleKey MoveRight = ConsoleKey.RightArrow;
+
         int[] direction = { 0, 0 };
 
         switch (pressedKey.Key)
         {
-            case ConsoleKey.UpArrow:
+            case MoveUp:
                 direction[1] -= 1;
                 break;
-            case ConsoleKey.DownArrow:
+            case MoveDown:
                 direction[1] += 1;
                 break;
-            case ConsoleKey.LeftArrow:
+            case MoveLeft:
                 direction[0] -= 1;
                 break;
-            case ConsoleKey.RightArrow:
+            case MoveRight:
                 direction[0] += 1;
                 break;
         }
