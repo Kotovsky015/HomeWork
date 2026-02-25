@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Module4_Functions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3b2d9760082bccedf3ed2b05cbb5ae0786f93e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f198b14721abf9ff1b57274fa2f3878093949991")]
 [assembly: System.Reflection.AssemblyProductAttribute("Module4_Functions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Module4_Functions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
